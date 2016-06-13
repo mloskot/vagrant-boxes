@@ -2,7 +2,7 @@
 
 * Name: [mloskot/manjaro-i3-16.06](https://atlas.hashicorp.com/mloskot/boxes/manjaro-i3-16.06/)
 * Version: 1.0.0
-* Download: https://github.com/mloskot/vagrant-boxes/releases/download/manjaro-i3-16.06-v1.0.0/manjaro-i3-16.06-x86_64.box
+* Download: https://github.com/mloskot/vagrant-boxes/releases/download/manjaro-i3-16.06-v1.0.0/manjaro-i3-16.06-v1.0.0.box
 
 A minimal base box built for Vagrant from
 [Manjaro i3 16.06](https://forum.manjaro.org/t/manjaro-i3-16-06/3329)
@@ -46,6 +46,16 @@ color scheme configured for
 
 ## Box Usage
 
+* `vagrant init mloskot/manjaro-i3-16.06`
+* Enable GUI in the generated Vagrantfile by uncommenting:
+```
+  config.vm.provider "virtualbox" do |v|
+    v.gui = true
+  end 
+```
+* `vagrant up --provider virtualbox`
+
+Alternatively, use `Vagrantfile` from GitHub
 ```
 git clone https://github.com/mloskot/vagrant-boxes.git
 cd manjaro-i3-16.06-x86_64
