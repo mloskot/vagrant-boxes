@@ -1,4 +1,4 @@
-# Manjaro-i3 Linux 16.06 (64-bit) for Vagrant
+# Vagrant Box: Manjaro-i3 Linux 16.06 (64-bit) 
 
 * URL: https://github.com/mloskot/vagrant-boxes/releases/download/manjaro-i3-16.06/manjaro-i3-16.06-x86_64.box
 * MD5: `0362de3574f6b161f3537e72e88bd77e`

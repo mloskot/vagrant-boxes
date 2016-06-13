@@ -1,6 +1,6 @@
 # Vagrant Boxes
 
-Handcrafted Vagrant Base Boxes.
+Handcrafted [Vagrant](https://www.vagrantup.com/) [Boxes](https://www.vagrantup.com/docs/boxes.html).
 
 List of boxes:
 
