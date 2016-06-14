@@ -61,3 +61,17 @@ git clone https://github.com/mloskot/vagrant-boxes.git
 cd manjaro-i3-16.06-x86_64
 vagrant up
 ```
+
+## Troubleshooting
+
+### Disabling Win+Enter Narrator hotkey in Windows
+
+In Windows, `Win+Enter` keybinding launches the Windows Narrator.
+Windows key is a popular alternative [i3 modifier](https://i3wm.org/docs/userguide.html#_using_i3)
+(`$mod`) key and pressing `$mod+Enter` opens a new terminal.
+The annoyance of launching the Windows Narrator every time
+you aim to open a terminal in the i3 environment of the guest VM,
+can be avoided by disabling the `Win+Enter` as the Narrator hotkey:
+
+1. Create registry key ` HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT \CurrentVersion\Image File Execution Options\Narrator.exe`
+2. Create new String Value with name `Debugger` and value `%1`.
