@@ -8,7 +8,11 @@ List of boxes:
 
 All boxes are available from Atlas: https://atlas.hashicorp.com/mloskot
 
-All boxes published via corresponding tagged release on GitHub are named according to the convention of `{operating system}-{version}-{flavour}-{box version}.box`.
+All boxes published via corresponding tagged release on GitHub are named according to this convention:
+
+ * `{system}-{system version}-[x86_32]-{flavour}-{box version}.box`.
+
+with the architecture `[x86_32]` tag optional, since all the boxes target 64-bit by default.
 
 ## Usage
 
