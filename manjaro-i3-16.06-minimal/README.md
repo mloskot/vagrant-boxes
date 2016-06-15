@@ -1,7 +1,7 @@
 # manjaro-i3-16.06-minimal
 
 * Atlas: [mloskot/manjaro-i3-16.06-minimal](https://atlas.hashicorp.com/mloskot/boxes/manjaro-i3-16.06-minimal/)
-* Download: [manjaro-i3-16.06-minimal-v1.0.0.box](https://github.com/mloskot/vagrant-boxes/releases/download/manjaro-i3-16.06-minimal-v1.0.0/)
+* Download: [manjaro-i3-16.06-minimal-v1.0.0.box](https://github.com/mloskot/vagrant-boxes/releases/download/manjaro-i3-16.06-minimal-v1.0.0/manjaro-i3-16.06-minimal-v1.0.0.box)
 
 Built from [manjaro-i3-16.06-x86_64.iso](https://sourceforge.net/projects/manjarolinux/files/community/i3/16.06/) using VirtualBox 5.0.21 and packaged using Vagrant 1.8.1.
 
