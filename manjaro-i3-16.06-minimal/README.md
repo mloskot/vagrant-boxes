@@ -9,7 +9,7 @@ using VirtualBox 5.0.22, packaged using Vagrant 1.8.1 and updated to [Manjaro Up
 
 * CPU: 2
 * RAM: 2048 MB
-* VHD: 40 GB
+* VMDK: 40 GB
 * Network:
   * NAT
   * SSH via port fowarding: host `2222` to guest `22`
