@@ -22,14 +22,10 @@ using VirtualBox 5.0.22, packaged using Vagrant 1.8.1 and updated to [Manjaro Up
 
 Based on dafault installation cut down to minimal set of essential packages and pre-configured with extras:
 
-* Vim - pre-configured with `jkl;` motion keys.
 * VirtualBox Guest Addition 5.0.22:
   * [virtualbox-guest-utils](https://www.archlinux.org/packages/?name=virtualbox-guest-utils)
   * [virtualbox-guest-modules-arch](https://www.archlinux.org/packages/?name=virtualbox-guest-modules-arch)
-* [Vundle](https://github.com/VundleVim) plug-in manager for Vim with a few handy plugins.
-
-Chris Kempson's [Monokai](https://chriskempson.github.io/base16/#monokai) color scheme configured for
-[urxvt](https://wiki.archlinux.org/index.php/rxvt-unicode) and Vim.
+* Other customizations and tweaks listed in [docs/HowToCreateBox.md](../docs/HowToCreateBox.md).
 
 ## Box Usage
 
