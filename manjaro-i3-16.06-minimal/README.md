@@ -13,7 +13,8 @@ using VirtualBox 5.0.22, packaged using Vagrant 1.8.1 and updated to [Manjaro Up
 * Network:
   * NAT
   * SSH via port fowarding: host `2222` to guest `22`
-* Users
+* Hostname: `vagrant-manjaro-1606`
+* Users / Passwords:
   * `root / vagrant`
   * `vagrant / vagrant` (Public Key authentication, password-less `sudo`)
 
