@@ -35,3 +35,7 @@ can be avoided by disabling the `Win+Enter` as the Narrator hotkey:
 
 1. Create registry key ` HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT \CurrentVersion\Image File Execution Options\Narrator.exe`
 2. Create new String Value with name `Debugger` and value `%1`.
+
+## Creating Boxes
+
+* [How-To create minimal Vagrant base box for Arch Linux](docs/HowToCreateBox.md)
