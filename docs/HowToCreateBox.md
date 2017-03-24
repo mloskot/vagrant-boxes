@@ -55,7 +55,8 @@ expac -H M "%011m\t%-20n\t%10d" $(comm -23 <(pacman -Qqen | sort) <(pacman -Qqg 
 * Remove packages
 
 ```shell
-sudo su -
+su
+pacman -Rns $(pacman -Qtdq)
 pacman -Scc --noconfirm
 paccache -ruk0
 rm -rf /var/log/journal/* /var/log/old/* /var/log/faillog /var/log/lastlog /var/log/pacman.log
