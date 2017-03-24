@@ -4,6 +4,8 @@ Applies to all Arch-based Linux distributions (eg. Manjaro Linux)
 
 ## Create
 
+Create a new Virtual Machine and install Arch Linux.
+
 * [Create an Arch Linux ase Vagrant base box](https://www.ideaplexus.com/2015/09/05/create-an-arch-linux-based-vagrant-base-box/)
 
 ## Import Insecure Keypair for SSH
