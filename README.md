@@ -4,6 +4,7 @@ Handcrafted [Vagrant](https://www.vagrantup.com/) [Boxes](https://www.vagrantup.
 
 List of boxes:
 
+* [manjaro-i3-17.0-minimal](manjaro-i3-17.0-minimal/README.md)
 * [manjaro-i3-16.06-minimal](manjaro-i3-16.06-minimal/README.md)
 
 All boxes are available from Atlas: https://atlas.hashicorp.com/mloskot
