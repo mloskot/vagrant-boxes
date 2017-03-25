@@ -1,9 +1,9 @@
 # manjaro-i3-17.0-minimal
 
 * Atlas: [mloskot/manjaro-i3-17.0-minimal](https://atlas.hashicorp.com/mloskot/boxes/manjaro-i3-17.0-minimal/)
-* Download: [manjaro-i3-17.0-minimal-v1.1.0.box](https://github.com/mloskot/vagrant-boxes/releases/download/manjaro-i3-17.0-minimal-v1.1.0/manjaro-i3-17.0-minimal-v1.1.0.box)
+* Download: [manjaro-i3-17.0-minimal-v1.0.0.box](https://github.com/mloskot/vagrant-boxes/releases/download/manjaro-i3-17.0-minimal-v1.0.0/manjaro-i3-17.0-minimal-v1.0.0.box)
 
-Built from [manjaro-i3-17.0-x86_64.iso](https://sourceforge.net/projects/manjarolinux/files/community/i3/17.0/)
+Built from [manjaro-i3-17.0-stable-x86_64.iso](https://sourceforge.net/projects/manjaro-i3/files/17.0/)
 using VirtualBox 5.1.18, packaged using Vagrant 1.9.1.
 
 ## Box VM
