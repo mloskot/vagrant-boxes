@@ -24,6 +24,31 @@ chown -R vagrant /home/vagrant/.ssh
 
 ## Configure
 
+### sudo
+
+* Run
+```shell
+gpasswd -a vagrant wheel
+```
+
+* Run `visudo /etc/sudoers`, configure `sudo` for `vagrant` without password and diasble `tty` requirement:
+```shell
+vagrant ALL=(ALL) NOPASSWD:ALL
+Defaults:vagrant !requiretty
+```
+
+The `!requiretty` should fix `sudo: no tty present and no askpass program specified` error at eg. `vagrant halt`.
+
+### Services
+
+```shell
+su
+systemctl enable sshd
+systemctl enable vboxservice
+systemctl enable rpcbind
+systemctl enable ntpd
+```
+
 ### VirtualBox Shared Folders
 
 ```shell
@@ -59,26 +84,61 @@ su
 pacman -Rns $(pacman -Qtdq)
 pacman -Scc --noconfirm
 paccache -ruk0
+```
+
+* Tidy up
+
+```shell
 rm -rf /var/log/journal/* /var/log/old/* /var/log/faillog /var/log/lastlog /var/log/pacman.log
+rm -fr /home/vagrant/.cache
 rm -f /home/vagrant/.bash_history
 rm -f /root/.bash_history
 cd /root
 dd if=/dev/zero of=zerofillfile bs=1M
 rm -f zerofillfile
+history -c
 ```
 
 ## Package
 
-First, temporarily, add `config.ssh.insert_key = false` to the Vagrantfile (see https://github.com/mitchellh/vagrant/issues/5186#issuecomment-81409295)
+* Create empty directory
 
 ```shell
-vagrant package --base {VIRTUALBOX VM NAME} --output virtualbox.box
+mkdir my-box
 ```
 
-Finally, remove `config.ssh.insert_key = false` from the Vagrantfile.
+* Create `Vagrantfile`.
+
+```
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+Vagrant.configure(2) do |config|
+  config.vm.box = 'mybox'
+  config.vm.provider "virtualbox" do |vb|
+    vb.gui = true
+  end
+end
+```
+
+* Temporarily, add `config.ssh.insert_key = false` to the Vagrantfile (see https://github.com/mitchellh/vagrant/issues/5186#issuecomment-81409295)
+
+* Find name of VirtualBox VM Name, eg. `name` attribute in `.vbox` file:
+
+```
+<VirtualBox>
+  <Machine uuid="{...}" name="myvm">...</Machine>
+</VirtualBox>
+```
+
+```shell
+vagrant package --base myvm --output my-box.box
+```
+
+* Finally, remove `config.ssh.insert_key = false` from the Vagrantfile.
 
 ## Test
 
 ```shell
-vagrant box add {VAGRANT BOX NAME} virtualbox.box
+vagrant box add my-box my-box.box
+vagrant up
 ```
